@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultat Skjerm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="/assets/avatar-3814049_640.png" alt="Illustrasjon av en avatar" class="avatar">
+            <h1>RESULTATENE ER INNE! SE HVA SOM SKJER NÅ!!!</h1>
+        </header>
+        <main>
+            <section class="question">
+                <h2>SKAL MAN HJELPE PERSONEN?</h2>
+            </section>
+            <section id="options-container" class="options"></section>
+            <section class="confirmation">
+                <div class="checkmark">&#10004;</div>
+                <h2 id="confirmation-message">HJELP ER PÅ VEI!</h2>
+            </section>
+            <section class="countdown">
+                <div class="timer">05</div>
+                <button id="next-button" class="next-button" style="display: none;">Neste spørsmål</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
