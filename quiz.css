@@ -1,0 +1,97 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+  background-color: #1c1163; /* Lilla bakgrunn */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.quiz-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@keyframes progress {
+  100% {
+    stroke-dashoffset: 1256.12939453125;
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 200%;
+  background: rgba(146, 122, 255, 0.5); /* Lys lilla farge med 50% opacity */
+  filter: blur(65px); /* Blur effekt */
+  border-radius: 10px;
+  z-index: -1; /* Sender blur effekten bak bildet */
+}
+
+.quiz-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  width: 100%;
+}
+
+.scenario {
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.option-button {
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #927aff;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+}
+
+.option-button:hover {
+  background-color: #fff;
+  color: #927aff;
+}

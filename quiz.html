@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <span class="github">
+      <a
+        href="https://github.com/LucaCuello/CircularCountdownTemplate"
+        target="_blank"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </span>
+    <div class="quiz-container">
+      <div class="timer-container">
+        <div
+          class="countdown-container"
+          data-duration="30"
+          data-transition="linear"
+          data-color="#ffffff"
+          data-size="100"
+          data-position="right"
+        ></div>
+      </div>
+      <div class="image-container">
+        <img src="pictures/4kpic.jpeg" alt="Quiz Image" class="quiz-image" />
+      </div>
+      <h1>Hva vil du gjøre?</h1>
+      <p class="scenario">Scenario 1 av 6</p>
+      <div class="options">
+        <button class="option-button">Hjelpe henne</button>
+        <button class="option-button">Forlate henne</button>
+        <button class="option-button">Stjele fra henne</button>
+        <button class="option-button">Spør om belønning</button>
+      </div>
+    </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>
