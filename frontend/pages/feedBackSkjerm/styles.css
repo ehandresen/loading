@@ -1,0 +1,125 @@
+/* Setter standard stilregler for hele kroppen og HTML-dokumentet, inkludert skrifttype, bakgrunnsfarge og fjerning av standardmarg. */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1C1163;
+    color: white;
+}
+
+/* Stil for hovedinnholdet i appen, sentrerer alt vertikalt og horisontalt. */
+#main-screen .content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Stil for teatermasker-seksjonen, sikrer at bildet vises i full bredde. */
+.theater-masks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+/* Stil for bilde innenfor teatermaskene, sikrer at bildet tar full bredde av containeren og justerer høyden automatisk. */
+.theater-masks img {
+    width: 100%;
+    height: auto;
+}
+
+/* Stil for meldingsseksjonen, fjerner standardmarg og setter bredde til full. */
+.message {
+    width: 100%;
+    margin: 0;
+}
+
+/* Stil for avsnittene, setter skriftstørrelse og marg kun på bunnen. */
+p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Stil for modalvinduet, skjult som standard og tar hele skjermen når det vises. */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(28, 17, 99, 0.4);
+}
+
+/* Stil for innholdet i modalen, sentrerer det og legger til visuelle effekter som avrundede hjørner og skygge. */
+.modal-content {
+    background-color: #1C1163;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stil for lukkeknappen i modalen, inkluderer interaktivitet ved hover. */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -10px; 
+    margin-right: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Stil for emoji-vurderinger, gjør emojiene klikkbare og visuelt tiltalende. */
+.emoji-ratings span {
+    font-size: 24px; 
+    cursor: pointer;
+    padding: 5px 10px; 
+}
+
+/* Stil for tekstområdet, justerer størrelsen og utseendet for innskriving av tilbakemelding. */
+textarea {
+    width: calc(100% - 40px); 
+    margin-top: 20px; 
+    padding: 10px; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+/* Stil for knapper, setter størrelse, farger og interaktivitet. */
+button {
+    padding: 10px 20px;
+    margin-top: 20px; 
+    width: 100%; 
+    font-size: 16px; 
+    background-color: white; 
+    color: #1C1163; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}
