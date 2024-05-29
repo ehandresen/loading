@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.container {
+  height: 100vh;
+  background: var(--color-darkBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  color: var(--color-lightPurple);
+  font-size: 4rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  width: 200px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#nameInput {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#btn {
+  background: var(--color-button);
+  color: var(--color-white);
+  padding: 5px;
+  border-radius: 5px;
+}
