@@ -3,21 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pin kode </title>
+    <title>Pin kode</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .error-message {
+        color: red;
+      }
+      .input-error {
+        border-color: red;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>Loading. .</h1>
       <p>Pin Kode</p>
     </div>
-    <input type="text" placeholder="Enter pin" />
-    <button class="start-button">Start</button>
+    <input type="text" id="pin-input" placeholder="Enter pin" />
+    <p id="error-message" class="error-message"></p>
+    <button class="start-button" onclick="validatePin()">Start</button>
+    <script>
+      function validatePin() {
+        const pinInput = document.getElementById("pin-input");
+        const errorMessage = document.getElementById("error-message");
+        const pin = pinInput.value;
+
+        if (pin === "") {
+          errorMessage.textContent = "Enter pin";
+          pinInput.classList.add("input-error");
+        } else if (pin === "1234") {
+          window.location.href = "/frontend/pages/enterName/name.html";
+        } else {
+          errorMessage.textContent = "Wrong pin";
+          pinInput.classList.add("input-error");
+        }
+      }
+
+      document.getElementById("pin-input").addEventListener("input", () => {
+        document.getElementById("error-message").textContent = "";
+        document.getElementById("pin-input").classList.remove("input-error");
+      });
+    </script>
   </body>
 </html>
