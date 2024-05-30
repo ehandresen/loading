@@ -15,6 +15,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/LucaCuello/Circular-Countdown-Template@95af10a/css/countdown.css"
     />
+    <style>
+      /* Add your styles here */
+    </style>
   </head>
   <body>
     <span class="github">
@@ -42,12 +45,36 @@
       <h1>Hva vil du gjøre?</h1>
       <p class="scenario">Scenario 1 av 6</p>
       <div class="options">
-        <button class="option-button">Hjelpe henne</button>
-        <button class="option-button">Forlate henne</button>
-        <button class="option-button">Stjele fra henne</button>
-        <button class="option-button">Spør om belønning</button>
+        <button class="option-button" onclick="selectOption()">
+          Hjelpe henne
+        </button>
+        <button class="option-button" onclick="selectOption()">
+          Forlate henne
+        </button>
+        <button class="option-button" onclick="selectOption()">
+          Stjele fra henne
+        </button>
+        <button class="option-button" onclick="selectOption()">
+          Spør om belønning
+        </button>
       </div>
     </div>
     <script src="quiz.js"></script>
+    <script>
+      let timeoutId;
+
+      function selectOption() {
+        clearTimeout(timeoutId);
+        window.location.href =
+          "/frontend/pages/loadingScreen/secondloadingpage.html"; // Redirect to the next loading page
+      }
+
+      window.onload = function () {
+        timeoutId = setTimeout(function () {
+          window.location.href =
+            "/frontend/pages/loadingScreen/secondloadingpage.html"; // Redirect to the next loading page
+        }, 30000); // 30 seconds
+      };
+    </script>
   </body>
 </html>
