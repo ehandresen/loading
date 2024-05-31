@@ -2,6 +2,30 @@ var Button1 = document.getElementById("answer1");
 var Button2 = document.getElementById("answer2");
 var Button3 = document.getElementById("answer3");
 var Button4 = document.getElementById("answer4");
+var QuestionBody = document.getElementById("theQuestion");
+var questions;
+var quest, An1, An2, An3, An4;
+
+function getData() {
+    quest = "Q";
+    An1 = "a";
+    An2 = "b";
+    An3 = "c";
+    An4 = "d";
+    updateFront();
+}
+
+function updateFront(){
+    var qCont1 = document.getElementById("cont1");
+    var qCont2 = document.getElementById("cont2");
+    var qCont3 = document.getElementById("cont3");
+    var qCont4 = document.getElementById("cont4");
+    QuestionBody.innerHTML = `<p>${quest}</p>`
+    qCont1.innerHTML = `${An1}`;
+    qCont2.innerHTML = `${An2}`;
+    qCont3.innerHTML = `${An3}`;
+    qCont4.innerHTML = `${An4}`;
+}
 
 function Timer(){
     var fullCounter = 30
@@ -38,7 +62,9 @@ function choose4(){
     dScore += 1;
     window.location.href = "../resultScreen/resultatScreen.html"
 }
-Timer()
+
+Timer();
+//getData();
 Button1.onclick = choose1;
 Button2.onclick = choose2;
 Button3.onclick = choose3;
