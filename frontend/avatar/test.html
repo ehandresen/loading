@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .stats-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+        .stats-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .stat {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            width: 60px;
+            color: #6c757d;
+        }
+        .stat-value {
+            width: 30px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .stat-bar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            flex-grow: 1;
+            position: relative;
+        }
+        .stat-bar-fill {
+            height: 100%;
+            border-radius: 5px;
+            position: absolute;
+        }
+        .hp .stat-bar-fill {
+            width: 55%;
+            background-color: #dc3545;
+        }
+        .attack .stat-bar-fill {
+            width: 46%;
+            background-color: #28a745;
+        }
+        .defense .stat-bar-fill {
+            width: 46%;
+            background-color: #28a745;
+        }
+        .sp-atk .stat-bar-fill {
+            width: 33%;
+            background-color: #28a745;
+        }
+        .sp-def .stat-bar-fill {
+            width: 44%;
+            background-color: #28a745;
+        }
+        .speed .stat-bar-fill {
+            width: 34%;
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stats-title">Stats</div>
+        <div class="stat hp">
+            <div class="stat-label">HP</div>
+            <div class="stat-value">55</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill"></div>
+            </div>
+        </div>
+        <div class="stat attack">
+            <div class="stat-label">Attack</div>
+            <div class="stat-value">46</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill"></div>
+            </div>
+        </div>
+        <div class="stat defense">
+            <div class="stat-label">Defense</div>
+            <div class="stat-value">46</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill"></div>
+            </div>
+        </div>
+        <div class="stat sp-atk">
+            <div class="stat-label">Sp.Atk</div>
+            <div class="stat-value">33</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill"></div>
+            </div>
+        </div>
+        <div class="stat sp-def">
+            <div class="stat-label">Sp.Def</div>
+            <div class="stat-value">44</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill"></div>
+            </div>
+        </div>
+        <div class="stat speed">
+            <div class="stat-label">Speed</div>
+            <div class="stat-value">34</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

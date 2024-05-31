@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="../../index.css" />
     <link rel="stylesheet" href="name.css" />
     <title>LOADING | HOME</title>
+    <style>
+      .error-message {
+        color: red;
+      }
+      .input-error {
+        border-color: red;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -15,8 +23,30 @@
 
       <div class="main-container">
         <input id="nameInput" type="text" placeholder="KALLENAVN" />
-        <button id="btn">VELG</button>
+        <p id="error-message" class="error-message"></p>
+        <button id="btn" onclick="validateName()">VELG</button>
       </div>
     </div>
+
+    <script>
+      function validateName() {
+        const nameInput = document.getElementById("nameInput");
+        const errorMessage = document.getElementById("error-message");
+        const name = nameInput.value.trim();
+
+        if (name === "") {
+          errorMessage.textContent = "Enter a name";
+          nameInput.classList.add("input-error");
+        } else {
+          window.location.href =
+            "/frontend/pages/loadingScreen/loadingLoadingScreen.html"; // Change this to the path of your desired HTML file
+        }
+      }
+
+      document.getElementById("nameInput").addEventListener("input", () => {
+        document.getElementById("error-message").textContent = "";
+        document.getElementById("nameInput").classList.remove("input-error");
+      });
+    </script>
   </body>
 </html>
