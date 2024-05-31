@@ -2,18 +2,18 @@ import mysql from 'mysql2';
 
 const pool = mysql
   .createPool({
-    host: 'localhost',
-    user: 'root', // bytt til din bruker
-    password: '', // skriv passord til din bruker
-    database: 'notes_app',
+    // legg inn riktig data i filen .env
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
   })
   .promise();
 
-(async () => {
-  try {
-    const [results, fields] = await pool.query('SELECT * FROM notes');
-    console.log(results);
-  } catch (err) {
-    console.error(err);
-  }
-})();
+async function getNotes() {
+  const [rows] = await pool.query('select * from notes');
+  return rows;
+}
+const notes = await getNotes();
+
+console.log(notes);
