@@ -38,11 +38,43 @@
           errorMessage.textContent = "Enter pin";
           pinInput.classList.add("input-error");
         } else if (pin === "1234") {
-          window.location.href = "/frontend/pages/enterName/name.html";
+          checkParticipantCount(pin)
+            .then((count) => {
+              if (count < 100) {
+                window.location.href = "/frontend/pages/enterName/name.html";
+              } else {
+                errorMessage.textContent = "Maximum participants reached";
+                pinInput.classList.add("input-error");
+              }
+            })
+            .catch((error) => {
+              errorMessage.textContent = "Error checking participant count";
+              pinInput.classList.add("input-error");
+            });
         } else {
           errorMessage.textContent = "Wrong pin";
           pinInput.classList.add("input-error");
         }
+      }
+
+      function checkParticipantCount(pin) {
+        // Simulate a backend call
+        return new Promise((resolve, reject) => {
+          // Mock data
+          const participantCounts = {
+            1234: 99, // Example: PIN "1234" has 99 participants
+            // Add other PINs and counts as needed
+          };
+
+          // Simulate network delay
+          setTimeout(() => {
+            if (participantCounts.hasOwnProperty(pin)) {
+              resolve(participantCounts[pin]);
+            } else {
+              reject("Invalid PIN");
+            }
+          }, 500); // 500ms delay
+        });
       }
 
       document.getElementById("pin-input").addEventListener("input", () => {

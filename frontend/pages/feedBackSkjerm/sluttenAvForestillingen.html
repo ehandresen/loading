@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Conclusion</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Lenke til CSS-filen for stilsetting -->
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to CSS file for styling -->
+  </head>
+  <body>
     <div id="main-screen">
-        <div class="content">
-            <div class="theatermask">
-                <img src="theater-masks.png" alt="Theater Masks"> <!-- Viser teatermasker bildet -->
-            </div>
-            <div class="message">
-                <p>Forestillingen er slutt!</p> <!-- Melding som indikerer at arrangementet er over -->
-                <p>Takk for at du styrte vår historie!</p> <!-- Takkemelding til publikum -->
-            </div>
-            <button id="continue-btn">Fortsett</button> <!-- Knapp for å fortsette -->
+      <div class="content">
+        <div class="theater-mask">
+          <img src="/frontend/pictures/mask.png" alt="Theater Masks" />
+          <!-- Display theater masks image -->
         </div>
+        <div class="message">
+          <p>Forestillingen er slutt!</p>
+          <!-- Message indicating the event is over -->
+          <p>Takk for at du styrte vår historie!</p>
+          <!-- Thank you message -->
+        </div>
+        <button id="continue-btn">Fortsett</button>
+        <!-- Button to continue -->
+      </div>
     </div>
 
     <div id="feedback-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span> <!-- Lukkeknapp for modalen -->
-            <p>Hjelp oss forbedre opplevelsen!</p> <!-- Tekst som ber om tilbakemelding -->
-            <div class="emoji-ratings">
-                <span>😞</span><span>😕</span><span>😐</span><span>🙂</span><span>😃</span> <!-- Emoji-vurderinger for tilbakemelding -->
-            </div>
-            <textarea placeholder="Andre kommentarer"></textarea> <!-- Område for brukeres teksttilbakemelding -->
-            <button>Send tilbakemelding</button> <!-- Knapp for å sende tilbakemelding -->
+      <div class="modal-content">
+        <p>Hjelp oss forbedre opplevelsen!</p>
+        <!-- Request for feedback -->
+        <div class="emoji-ratings">
+          <span>😞</span><span>😕</span><span>😐</span><span>🙂</span
+          ><span>😃</span>
+          <!-- Emoji feedback options -->
         </div>
+        <textarea placeholder="Andre kommentarer"></textarea>
+        <!-- Area for user comments -->
+        <button>Send tilbakemelding</button>
+        <!-- Button to send feedback -->
+      </div>
     </div>
 
-    <script src="script.js"></script> <!-- Lenke til JavaScript-filen -->
-</body>
+    <script src="script.js"></script>
+    <!-- Link to JavaScript file -->
+  </body>
 </html>
