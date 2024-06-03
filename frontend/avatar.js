@@ -267,3 +267,7 @@ function startTimer() {
     timeLeft--;
   }, 1000);
 }
+
+setTimeout(function () {
+  window.location.href = "/frontend/pages/loadingScreen/secondloadingpage.html"; // Change this to the path of your final HTML file
+}, 20000); // 20000 milliseconds = 20 seconds
