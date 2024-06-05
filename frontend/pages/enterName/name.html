@@ -22,9 +22,42 @@
     </div>
 
     <script>
-      const inappropriateNames = [
-        // List of inappropriate names...
-      ];
+     const inappropriateNames = [
+    // English
+    "badword1", "badword2", "badword3", // ... continue listing bad words in English
+    "crap", "damn", "hell", "ass", "bastard", "bitch", "bullshit", "cock", "cunt", 
+    "dick", "douche", "fag", "faggot", "fuck", "fucking", "motherfucker", "nigga",
+    "nigger", "piss", "prick", "pussy", "shit", "slut", "twat", "whore", "wanker", 
+    "arse", "arsehole", "bollocks", "bugger", "bloody", "git", "minger", "muppet", 
+    "nonce", "numpty", "pillock", "plonker", "shag", "tosser", "twat", "wazzock",
+    "wanker", "wazzock", "arsehat", "bint", "chav", "git", "minge", "nob", "pikey", 
+    "ponce", "prat", "skank", "slag", "slapper", "tart", "tossa", "trollop", 
+    "twit", "arsewipe", "bollocks", "bugger", "flaming", "humbug", "pillock", 
+    "plonker", "prat", "scrubber", "scumbag", "shithead", "wazzock", "wazzock", 
+    "berk", "bitchy", "bollock", "boot", "buggered", "bullocks", "clot", "daft", 
+    "fanny", "fucker", "gobshite", "mardy", "muppet", "nobhead", "numpty", 
+    "pillock", "prannet", "pranny", "prat", "prick", "scrubber", "shithole", 
+    "slag", "slapper", "sodding", "tosser", "twat", "wazzock",
+
+    // Norwegian
+    "drittsekk", "faen", "helvete", "jævel", "kjerring", "kuk", "kukhuvud", "ludder", 
+    "møkka", "pikk", "pule", "rasshøl", "ræv", "satan", "skit", "fitte", "faens", 
+    "forbanna", "hestkuk", "hore", "kuksuger", "møkkamann", "drit", "idiot", 
+    "jævla", "jævlig", "møkk", "dritthue", "drittpakk", "dumming", "fitte", 
+    "fittetryne", "helvete", "jævel", "kjerring", "kuk", "ludder", "pikk", 
+    "puleskalle", "rasshøl", "rævhøl", "satan", "skit", "slask", "slut", "stokkdum", 
+    "stygging", "suger", "tulling", "tøffelhelt", "fjott", "ræva", "drittunge", 
+    "rasshøl", "fittsatan", "kuklort", "drittsekk", "jævlig", "ræv", "kuksuger", 
+    "horunge", "pikktryne", "jævel", "fittekuk", "faen", "rævslikker", "kukstøvel", 
+    "horemor", "faens", "jævla", "drittfjes", "møkkamann", "jævelunge", "kukhuvud", 
+    "dritt", "skitunge", "rævhøl", "møkkakjerring", "jævlig", "fittekjerring", 
+    "helvetes", "kukksvin", "jævelunge", "drittsekk", "hestkuk", "skitunge", 
+    "horeunge", "faens", "kuktrynet", "jævlig", "møkka", "fitte", "drit", 
+    "jævlig", "dritunge", "møkk", "jævla", "rasshøl", "hore", "faen", "møkka", 
+    "drittunge", "kjerring", "møkka", "faens", "drit", "jævlig", "kuk", 
+    "rasshøl", "møkkamann", "skit", "faen", "jævel", "helvete"
+];
+
 
       function validateName() {
         const nameInput = document.getElementById("nameInput");
