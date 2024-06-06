@@ -1,0 +1,82 @@
+/* Overall body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #9011cb, #3f06c4); /* Example gradient */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container for questions */
+#questions-container {
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+/* Individual question block */
+#questions-container div {
+    background: rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+#questions-container div:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+#add-question-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#add-question-form input[type="text"], #add-question-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+#add-question-form button {
+    background-color: #4CAF50; /* Green background for the button */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-question-form button:hover {
+    background-color: #45a049;
+}
+
+/* Inputs */
+input[type="text"] {
+    background: rgba(255, 255, 255, 0.8);
+    color: #3b3b3b;
+}
+
+/* Make sure your HTML links this CSS file correctly */
