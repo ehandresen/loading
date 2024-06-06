@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin kode</title>
+    <!-- Linking external CSS for styling -->
+    <link rel="stylesheet" href="./assets/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Styling for error message */
+      .error-message {
+        color: red;
+      }
+      /* Styling for input error */
+      .input-error {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loading. .</h1>
+      <p>Pin Kode</p>
+    </div>
+    <!-- Input field for entering PIN -->
+    <input type="text" id="pin-input" placeholder="Enter pin" />
+    <p id="error-message" class="error-message"></p>
+    <!-- Button to submit PIN -->
+    <button class="start-button" onclick="submitPin()">Start</button>
+
+    <script>
+      async function submitPin() {
+        const pinInput = document.getElementById("pin-input");
+        const errorMessage = document.getElementById("error-message");
+        const pin = pinInput.value;
+
+        if (pin === "") {
+          errorMessage.textContent = "Enter pin";
+          pinInput.classList.add("input-error");
+          return;
+        }
+
+        try {
+          console.log("Submitting PIN:", pin);
+          const response = await fetch("http://localhost:3001/add-pin", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ pin }),
+          });
+
+          console.log("Response received:", response);
+
+          if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(errorText);
+          }
+
+          const data = await response.json();
+          console.log("Data received:", data);
+
+          if (data.success) {
+            const gameId = data.gameId;
+            window.location.href = `/pages/enterName/name.html?gameId=${gameId}`;
+          } else {
+            throw new Error("Invalid response from server.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          errorMessage.textContent = "Error storing the pin: " + error.message;
+          pinInput.classList.add("input-error");
+        }
+      }
+
+      document.getElementById("pin-input").addEventListener("input", () => {
+        document.getElementById("error-message").textContent = "";
+        document.getElementById("pin-input").classList.remove("input-error");
+      });
+    </script>
+  </body>
+</html>

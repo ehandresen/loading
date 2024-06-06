@@ -28,7 +28,6 @@ async function connectToDatabase() {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
     });
-
     console.log("Connected to the database successfully!");
   } catch (error) {
     console.error("Error connecting to the database:", error);
@@ -42,13 +41,13 @@ app.get("/", function (req, res) {
 });
 
 app.post("/add-player", async (req, res) => {
-  const playerName = req.body.playername;
+  const { playername, gameId } = req.body;
   const connection = await connectToDatabase();
 
   try {
     const [results] = await connection.execute(
-      "INSERT INTO player (Playernavn) VALUES (?)",
-      [playerName]
+      "INSERT INTO player (Playernavn, GameID) VALUES (?, ?)",
+      [playername, gameId]
     );
     console.log("Player added:", results);
     res.send("Player added successfully!");
@@ -62,8 +61,6 @@ app.post("/add-player", async (req, res) => {
 
 async function startServer() {
   const connection = await connectToDatabase();
-
-  // Ensure the connection is available throughout the app
   app.locals.db = connection;
 
   app.listen(3000, () => {

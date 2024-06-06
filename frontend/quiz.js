@@ -100,3 +100,6 @@ initCountdown();
 setTimeout(function () {
   alert("Time is up!");
 }, options.duration * 1000);
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Screen</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #1c1163;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Bangers", cursive;
+        margin: 0;
+      }
+
+      .loading-text {
+        font-size: 4rem;
+        color: #927aff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dot {
+        animation: blink 1.5s infinite both;
+        font-size: 4rem;
+        color: #927aff;
+      }
+
+      .dot:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      .dot:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-text">
+      LOADING<span class="dot">.</span><span class="dot">.</span
+      ><span class="dot">.</span>
+    </div>
+
+    <script>
+      setTimeout(function () {
+        window.location.href =
+          "../resultatSkjerm/public/resultatScreen.html"; // Change this to the path of your final HTML file
+      }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+  </body>
+</html>

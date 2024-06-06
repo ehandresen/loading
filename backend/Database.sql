@@ -54,3 +54,19 @@ CREATE table Login (
 	GameID INT,
 	PIN INT
 );
+
+CREATE TABLE Game (
+    GameID INT auto_increment,
+    GameName VARCHAR(100),
+    PIN INT UNIQUE,
+    PRIMARY KEY (GameID)
+);
+
+CREATE TABLE GameLogin (
+    GameLoginID INT auto_increment,
+    GameID INT,
+    PlayerID INT,
+    CONSTRAINT GameLoginGameFK FOREIGN KEY (GameID) REFERENCES Game (GameID),
+    CONSTRAINT GameLoginPlayerFK FOREIGN KEY (PlayerID) REFERENCES Player (PlayerID),
+    PRIMARY KEY (GameLoginID)
+);
