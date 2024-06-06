@@ -48,7 +48,7 @@ function updateFront(){
 }
 
 function Timer(){
-    var fullCounter = 500
+    var fullCounter = 30
     var counter = document.getElementById("timer")
     function countdown() {
         counter.innerHTML = `${fullCounter}`;
@@ -62,30 +62,15 @@ function Timer(){
     }
     countdown();
 }
-function choose1(){
-    var aScore = 0;
-    aScore += 1;
-    window.location.href = "../resultScreen/resultatScreen.html"
-}
-function choose2(){
-    var bScore = 0;
-    bScore += 1;
-    window.location.href = "../resultScreen/resultatScreen.html"
-}
-function choose3(){
-    var cScore = 0;
-    cScore += 1;
-    window.location.href = "../resultScreen/resultatScreen.html"
-}
-function choose4(){
-    var dScore = 0;
-    dScore += 1;
+function selectAnswer(answerId){
+    const situation = 2;
+    let answerChoise = "Score" + answerId;
     window.location.href = "../resultScreen/resultatScreen.html"
 }
 
 Timer();
 getData();
-Button1.onclick = choose1;
-Button2.onclick = choose2;
-Button3.onclick = choose3;
-Button4.onclick = choose4;
+Button1.onclick = function() { selectAnswer("A"); };
+Button2.onclick = function() { selectAnswer("B"); };
+Button3.onclick = function() { selectAnswer("C"); };
+Button4.onclick = function() { selectAnswer("D"); };
