@@ -224,7 +224,7 @@ function resetPlayerDetails() {
       <div class="stat" id="time-stat">
         <div>Time</div>
         <img
-          src="/frontend/pictures/time.png"
+          src="/pictures/time.png"
           alt="Time"
           class="stat-icon"
         />
@@ -232,7 +232,7 @@ function resetPlayerDetails() {
       <div class="stat" id="stats-stat">
         <div>Stats</div>
         <img
-          src="/frontend/pictures/stats.png"
+          src="/pictures/stats.png"
           alt="Stats"
           class="stat-icon"
         />
@@ -240,7 +240,7 @@ function resetPlayerDetails() {
       <div class="stat" id="details-stat">
         <div>Details</div>
         <img
-          src="/frontend/pictures/details.png"
+          src="/pictures/details.png"
           alt="Details"
           class="stat-icon"
         />
