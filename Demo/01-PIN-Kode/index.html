@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin kode</title>
+    <!-- Linking external CSS for styling -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Styling for error message */
+      .error-message {
+        color: red;
+      }
+      /* Styling for input error */
+      .input-error {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loading. .</h1>
+      <p>Pin Kode</p>
+    </div>
+    <!-- Input field for entering PIN -->
+    <input type="text" id="pin-input" placeholder="Enter pin" />
+    <p id="error-message" class="error-message"></p>
+    <!-- Button to submit PIN -->
+    <button id="start-button" class="start-button">Start</button>
+
+    <script>
+        const pinInput = document.getElementById("pin-input");
+        const nextButton = document.getElementById("start-button");
+        const errorMessage = document.getElementById("error-message");
+
+        function submitPin() {
+            const pin = pinInput.value; // Flyttet denne linjen inn i funksjonen for å få den oppdaterte verdien
+            if (pin === "1234") { // Bruker '===' for sammenligning
+                window.location.href = "../02-Navn-input/name.html";
+            } else {
+                errorMessage.textContent = "Enter correct pin"; // Oppdater meldingen for feil pin
+                pinInput.classList.add("input-error");
+            }
+        }
+
+        nextButton.addEventListener("click", submitPin);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Conclusion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to CSS file for styling -->
+  </head>
+  <body>
+    <div id="main-screen">
+      <div class="content">
+        <div class="theater-mask">
+          <img src="../Picture/mask.png" alt="Theater Masks" />
+          <!-- Display theater masks image -->
+        </div>
+        <div class="message">
+          <p>Forestillingen er over!</p>
+          <!-- Message indicating the event is over -->
+          <p>Takk for at du deltok i historien!</p>
+          <!-- Thank you message -->
+        </div>
+        <button id="continue-btn">Fortsett</button>
+        <!-- Button to continue -->
+      </div>
+    </div>
+
+    <div id="feedback-modal" class="modal">
+      <div class="modal-content">
+        <p>Hjelp oss forbedre opplevelsen!</p>
+        <!-- Request for feedback -->
+        <div class="emoji-ratings">
+          <span>😞</span><span>😕</span><span>😐</span><span>🙂</span
+          ><span>😃</span>
+          <!-- Emoji feedback options -->
+        </div>
+        <textarea placeholder="Andre kommentarer"></textarea>
+        <!-- Area for user comments -->
+        <button>Send tilbakemelding</button>
+        <!-- Button to send feedback -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Link to JavaScript file -->
+  </body>
+</html>

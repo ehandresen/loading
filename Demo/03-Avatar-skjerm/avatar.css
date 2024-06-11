@@ -1,0 +1,243 @@
+body {
+  background-color: #1c1163;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  flex-direction: column;
+}
+
+.avatar-container {
+  text-align: center;
+}
+
+.avatar-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background-color: #0f0550;
+  cursor: pointer;
+}
+
+.avatar-text {
+  font-size: 2rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  z-index: 1001;
+  color: #1c1163;
+}
+
+.modal-avatar-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background-color: #1c1163;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-level {
+  font-size: 1.2rem;
+  background-color: #927aff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.modal-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 70px;
+  height: 70px;
+  margin-top: 1rem;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.game-stats {
+  width: 100%;
+  margin-top: 20px;
+  display: none; /* Start hidden */
+}
+
+.stats-container {
+  width: 70%;
+}
+
+.stats-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #1c1163;
+}
+
+.stat-flex {
+  display: flex;
+  align-items: center;
+}
+
+.stat-label {
+  width: 60px;
+  color: #6c757d;
+}
+
+.stat-value {
+  width: 30px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.stat-bar {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  flex-grow: 1;
+  color: red;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.hp .stat-bar-fill {
+  width: 55%;
+  background-color: #dc3545;
+}
+
+.attack .stat-bar-fill {
+  width: 46%;
+  background-color: #28a745;
+}
+
+.defense .stat-bar-fill {
+  width: 46%;
+  background-color: #28a745;
+}
+
+.sp-atk .stat-bar-fill {
+  width: 33%;
+  background-color: #28a745;
+}
+
+.sp-def .stat-bar-fill {
+  width: 44%;
+  background-color: #28a745;
+}
+
+.speed .stat-bar-fill {
+  width: 34%;
+  background-color: #dc3545;
+}
+
+/* Timer styles */
+.timer-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.timer {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #0f0550;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.timer:after {
+  /*content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  box-sizing: border-box;*/
+  animation: countdown 1800s linear forwards;
+}
+
+/* Details styles */
+.details-stats {
+  background-color: #6a5ae0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 20px;
+  gap: 1rem;
+}
+
+.details-item {
+  text-align: center;
+  color: #fff;
+}
+
+.details-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.details-label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.details-value {
+  font-size: 18px;
+  font-weight: bold;
+  gap: 2rem;
+}

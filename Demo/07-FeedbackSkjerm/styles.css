@@ -1,0 +1,167 @@
+/* Basic styles for the entire body and HTML document, including font, background color, and removing default margin. */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #1c1163, #3a1b94);
+  color: white;
+}
+
+/* Styles for the main content of the app, centering everything vertically and horizontally. */
+#main-screen .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Styles for the theater mask section, ensuring the image is displayed in full width. */
+.theater-mask {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Styles for the image within the theater mask, ensuring it takes the full width of the container and adjusts height automatically. */
+.theater-mask img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for the message section, removing default margin and setting width to full. */
+.message {
+  width: 100%;
+  margin: 0;
+}
+
+/* Styles for paragraphs, setting font size and bottom margin only. */
+p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Styles for buttons, setting size, colors, and interactivity. */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #7d4efa;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  background-color: #6c3bff;
+}
+
+/* Styles for the modal window, hidden by default and takes the full screen when displayed. */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(28, 17, 99, 0.8);
+}
+
+/* Styles for the content inside the modal, centering it and adding visual effects such as rounded corners and shadow. */
+.modal-content {
+  background-color: #ffffff;
+  color: #1c1163;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Styles for emoji ratings, making the emojis clickable and visually appealing. */
+.emoji-ratings span {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Styles for the textarea, adjusting size and appearance for user feedback input. */
+textarea {
+  width: calc(100% - 40px);
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styles for modal buttons, setting size, colors, and interactivity. */
+.modal-content button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #7d4efa;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #6c3bff;
+}
+
+/* Media query for small screens to adjust layout and font sizes */
+@media (max-width: 600px) {
+  #main-screen .content {
+    width: 90%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .theater-mask {
+    width: 70%;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .emoji-ratings span {
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    width: calc(100% - 30px);
+  }
+
+  .modal-content button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
