@@ -35,7 +35,7 @@ function updateTimeStatistics() {
       <div class="stat" id="time-stat">
         <div>Time</div>
         <img
-          src="/pictures/time.png"
+          src="../picture/time.png"
           alt="Time"
           class="stat-icon"
         />
@@ -43,7 +43,7 @@ function updateTimeStatistics() {
       <div class="stat" id="stats-stat">
         <div>Stats</div>
         <img
-          src="/pictures/stats.png"
+          src="../picture/stats.png"
           alt="Stats"
           class="stat-icon"
         />
@@ -51,7 +51,7 @@ function updateTimeStatistics() {
       <div class="stat" id="details-stat">
         <div>Details</div>
         <img
-          src="/pictures/details.png"
+          src="../picture/details.png"
           alt="Details"
           class="stat-icon"
         />
@@ -115,7 +115,7 @@ function updateGameStatistics() {
           <div class="stat" id="time-stat">
             <div>Time</div>
             <img
-              src="/pictures/time.png"
+              src="../picture/time.png"
               alt="Time"
               class="stat-icon"
             />
@@ -123,7 +123,7 @@ function updateGameStatistics() {
           <div class="stat" id="stats-stat">
             <div>Stats</div>
             <img
-              src="/pictures/stats.png"
+              src="../picture/stats.png"
               alt="Stats"
               class="stat-icon"
             />
@@ -131,7 +131,7 @@ function updateGameStatistics() {
           <div class="stat" id="details-stat">
             <div>Details</div>
             <img
-              src="/pictures/details.png"
+              src="../picture/details.png"
               alt="Details"
               class="stat-icon"
             />
@@ -174,7 +174,7 @@ function updatePlayerDetails() {
       <div class="stat" id="time-stat">
         <div>Time</div>
         <img
-          src="/pictures/time.png"
+          src="../picture/time.png"
           alt="Time"
           class="stat-icon"
         />
@@ -182,7 +182,7 @@ function updatePlayerDetails() {
       <div class="stat" id="stats-stat">
         <div>Stats</div>
         <img
-          src="/pictures/stats.png"
+          src="../picture/stats.png"
           alt="Stats"
           class="stat-icon"
         />
@@ -190,7 +190,7 @@ function updatePlayerDetails() {
       <div class="stat" id="details-stat">
         <div>Details</div>
         <img
-          src="/pictures/details.png"
+          src="../picture/details.png"
           alt="Details"
           class="stat-icon"
         />
@@ -212,7 +212,7 @@ function addStatEventListeners() {
     .getElementById("details-stat")
     .addEventListener("click", function () {
       updatePlayerDetails();
-      document.getElementById("details-stats").style.display = "flex"; // Show details on click
+      document.getElementById("details-stats").style.display = "flex"; // Shows details on click
     });
 }
 
@@ -224,7 +224,7 @@ function resetPlayerDetails() {
       <div class="stat" id="time-stat">
         <div>Time</div>
         <img
-          src="/pictures/time.png"
+          src="../picture/time.png"
           alt="Time"
           class="stat-icon"
         />
@@ -232,7 +232,7 @@ function resetPlayerDetails() {
       <div class="stat" id="stats-stat">
         <div>Stats</div>
         <img
-          src="/pictures/stats.png"
+          src="../picture/stats.png"
           alt="Stats"
           class="stat-icon"
         />
@@ -240,7 +240,7 @@ function resetPlayerDetails() {
       <div class="stat" id="details-stat">
         <div>Details</div>
         <img
-          src="/pictures/details.png"
+          src="../picture/details.png"
           alt="Details"
           class="stat-icon"
         />
@@ -269,5 +269,5 @@ function startTimer() {
 }
 
 setTimeout(function () {
-  window.location.href = "../loadingScreen/secondloadingpage.html"; // Change this to the path of your final HTML file
+  window.location.href = "../05-LoadingSkjerm/secondLoadingpage.html"; 
 }, 15000); // 15 seconds in milliseconds 
