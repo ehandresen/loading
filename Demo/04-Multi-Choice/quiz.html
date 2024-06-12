@@ -20,8 +20,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/LucaCuello/Circular-Countdown-Template@95af10a/css/countdown.css"
     />
+
     <style>
-      /* Add your styles here */
     </style>
   </head>
   <body>
@@ -45,7 +45,7 @@
         ></div>
       </div>
       <div class="image-container">
-        <img src="pictures/4kpic.jpeg" alt="Quiz Image" class="quiz-image" />
+        <img src="../Picture/4kpic.jpeg" alt="Quiz Image" class="quiz-image" />
       </div>
       <h1>Hva vil du gjøre?</h1>
       <p class="scenario">Scenario 1 av 6</p>
@@ -71,13 +71,13 @@
       function selectOption() {
         clearTimeout(timeoutId);
         window.location.href =
-          "pages/loadingScreen/thirdLoadingpage.html"; // Redirect to the next loading page
+          "../05-LoadingSkjerm/thirdLoadingpage.html"; // Redirect to the next loading page
       }
 
       window.onload = function () {
         timeoutId = setTimeout(function () {
           window.location.href =
-            "pages/loadingScreen/thirdLoadingpage.html"; // Redirect to the next loading page
+            "../05-LoadingSkjerm/thirdLoadingpage.html"; // Redirect to the next loading page
         }, 30000); // 30 seconds
       };
     </script>

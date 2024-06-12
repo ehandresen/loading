@@ -73,6 +73,7 @@ const adjustCircleSize = (size) => {
   progressWrapper.style.height = size;
 };
 
+
 const setInitialPosition = (initialPosition) => {
   if (initialPosition === "up") {
     progressWrapper.style.transform = "rotate(270deg)";
@@ -83,6 +84,7 @@ const setInitialPosition = (initialPosition) => {
   }
 };
 
+// Animation 
 const animationStart = (color, transition, duration) => {
   let length = progress.getTotalLength();
   progress.style.stroke = color;
