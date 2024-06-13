@@ -81,5 +81,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 setTimeout(function () {
   window.location.href =
-    "../07-FeedbackSkjerm/sluttenAvForestillingen.html"; // Change this to the path of your final HTML file
-}, 10000); // 5000 milliseconds = 5 seconds
+    "../07-FeedbackSkjerm/sluttenAvForestillingen.html"; // Redirect to the next page
+}, 10000); //  10 seconds
