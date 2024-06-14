@@ -270,4 +270,4 @@ function startTimer() {
 
 setTimeout(function () {
   window.location.href = "../05-LoadingSkjerm/secondLoadingpage.html"; 
-}, 15000); // 15 seconds in milliseconds 
+}, 20000); // 20 seconds in milliseconds 
